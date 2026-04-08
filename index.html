@@ -4,16 +4,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>KaraKleanz - Commercial and Domestic Services</title> 
     <style> 
-      body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f0f0f0; } 
-      .logo-container { max-width: 100%; width: 300px; 
-                       /* Default width for desktop / } 
-                       .logo-container img { width: 100%; height: auto; display: block; } 
-                       @media (min-width: 600px) { .logo-container { width: 1000px; / Full size on larger screens */ } } 
+      .responsive-image {
+          width: 100%; /* Take the full width of the container */
+          max-width: 800px; /* Optional: Set a maximum width */
+          margin: 0 auto; /* Center the image if a max-width is set */
+          overflow: hidden; /* Hide overflow */
+      }
+      
+      .responsive-image img {
+          width: 100%; /* Image takes the full width of the div */
+          height: auto; /* Maintain aspect ratio */
+          display: block; /* Prevent any space below the image */
+      }
     </style> 
   </head> 
   <body> 
-    <div class="logo-container"> 
-      <img src="logo.png" alt="Logo" width="1000" height="1000"> 
-    </div> 
+    <div class="responsive-image">
+        <img src="logo.png" alt="Description of image" />
+    </div>
   </body> 
 </html>
