@@ -1,161 +1,29 @@
-<html lang="en" data-bs-theme="light">
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="100">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com/ajax/libs/animejs/">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Astro v5.13.2">
-    <title>KaraKleanz - Commercial and Domestic Services</title> 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbar-fixed/">
-    <script src="assets/js/color-modes.js"></script>
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB">
-    <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
-    <link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
-    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
-    <meta name="theme-color" content="#712cf9">
+    <meta name="author" content="Jahi Grant">
+    <meta name="generator" content="KaraKleanz v0.0.1">
+    <title>KaraKleanz - Commercial and domestic cleaning service</title> 
+    <link rel="canonical" href="index.html">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="assets/img/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="assets/img/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="assets/img/manifest.json">
+    <link rel="mask-icon" href="assets/img/safari-pinned-tab.svg" color="#175D68">
+    <link rel="icon" href="assets/img/favicon.ico">
+    <meta name="theme-color" content="#175D68">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/navbar-fixed.css" rel="stylesheet">
     <link href="assets/fonts/bootstrap-icons.min.css" rel="stylesheet">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem
-            }
-        }
-
-        .b-example-divider {
-            width: 100%;
-            height: 3rem;
-            background-color: #0000001a;
-            border: solid rgba(0, 0, 0, .15);
-            border-width: 1px 0;
-            box-shadow: inset 0 .5em 1.5em #0000001a, inset 0 .125em .5em #00000026
-        }
-
-        .b-example-vr {
-            flex-shrink: 0;
-            width: 1.5rem;
-            height: 100vh
-        }
-
-        .bi {
-            vertical-align: -.125em;
-            fill: currentColor
-        }
-
-        .nav-scroller {
-            position: relative;
-            z-index: 2;
-            height: 2.75rem;
-            overflow-y: hidden
-        }
-
-        .nav-scroller .nav {
-            display: flex;
-            flex-wrap: nowrap;
-            padding-bottom: 1rem;
-            margin-top: -1px;
-            overflow-x: auto;
-            text-align: center;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch
-        }
-
-        .btn-bd-primary{
-            --bd-violet-bg: #153649;
-            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-            --bs-btn-font-weight: 600;
-            --bs-btn-color: var(--bs-white);
-            --bs-btn-bg: var(--bd-violet-bg);
-            --bs-btn-border-color: var(--bd-violet-bg);
-            --bs-btn-hover-color: var(--bs-white);
-            --bs-btn-hover-bg: #20506c;
-            --bs-btn-hover-border-color: #153649;
-            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-            --bs-btn-active-color: var(--bs-btn-hover-color);
-            --bs-btn-active-bg: #153649;
-            --bs-btn-active-border-color: #153649
-        }
-
-        [data-bs-theme="dark"] .btn-outline-primary {
-  color: #ffffff;
-border-color: #ffffff
-}
-
-        .btn-outline-primary {
-            border-color: #153649;
-            color: #153649;
-        }
-        .btn-outline-primary:hover {
-            color: #fff;
-    background-color: #153649;
-    border-color: #153649;
-        }
-
-        .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
-    color: var(--bs-btn-active-color);
-    background-color: 20506c;
-    border-color: 20506c;
-}
-
-        .dropdown-item.active, .dropdown-item:active {
-    color: var(--bs-dropdown-link-active-color);
-    text-decoration: none;
-    background-color: #153649;
-}
-
-[data-bs-theme="dark"] a {
-            color: #ffffff;
-        }
-
-        a {
-            color: #153649;
-        }
-
-        .bd-mode-toggle {
-            z-index: 1500
-        }
-
-        .bd-mode-toggle .bi {
-            width: 1em;
-            height: 1em
-        }
-
-        .bd-mode-toggle .dropdown-menu .active .bi {
-            display: block !important
-        }
-        .btn-circle.btn-xl {
-			width: 40px;
-			height: 40px;
-			padding: 4px 4px;
-			border-radius: 60px;
-			font-size: 15px;
-			text-align: center;
-		}
-        #bd-theme.dropdown-toggle::after {
-            display: none!important;
-        }
-        section { padding: 100px 0; min-height: 80vh; }
-        .hero { display: flex; align-items: center; }
-    </style>
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar"> 
+<body> 
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
         <symbol id="check2" viewBox="0 0 16 16">
             <path
@@ -214,107 +82,264 @@ border-color: #ffffff
                 </li>
         </ul>
     </div>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-fluid"> <a class="navbar-brand" href="#">KaraKleanz</a> 
-            <button class="navbar-toggler collapsed rounded-0" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+    <nav id="mainNavbar" class="navbar navbar-expand-lg fixed-top navbar-inverse">
+        <div class="container-fluid"> 
+
+<a class="navbar-brand d-flex align-items-center" href="#home">
+    <img src="assets/img/logo_brand_dark.png" alt="KaraKleanz" class="brand-img brand-light">
+    <img src="assets/img/logo_brand_light.png" alt="KaraKleanz" class="brand-img brand-dark">
+</a>
+            <button class="navbar-toggler collapsed rounded-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-expanded="false"
                 aria-label="Toggle navigation"> 
                 <span class="navbar-toggler-icon"></span> 
             </button>
-            <div class="navbar-collapse collapse" id="navbarCollapse" style="">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <div class="navbar-collapse collapse">
+                  <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#how-it-works">How it works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <main class="container">
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body" id="navbarCollapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" href="#how-it-works">How it works</a></li>
+                <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" href="#pricing">Pricing</a></li>
+                <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <main class="container-fluid px-0">
 
         <!-- Hero Section -->
-        <section id="hero" class="hero">
-            <div class="container-fluid text-center">
-                <h1 class="display-3 fw-bold">Restore your space</h1>
-                <p class="lead">A premiere cleaning service. Where cleaning becomes an act of spatial sanctity.</p>
-                <a href="#pricing" class="btn btn-outline-primary btn-lg rounded-0">Learn More</a>
+        <section id="home" class="hero-section">
+            <div class="container-fluid text-left px-5">
+                <h1 class="display-2 fw-bold">Restore your space</h1>
+                <p class="lead">
+                    A premiere commercial and domestic cleaning service.<br>
+                    Where cleaning becomes an act of spatial sanctity.
+                </p>
+                <a href="#pricing" class="btn btn-outline-light btn-lg rounded-0">Learn More</a>
             </div> 
         </section>
 
-        <!-- About Section -->
-        <section id="about">
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="py-5">
             <div class="container text-center">
-                <h1 class="display-4 fw-normal text-body-emphasis">About Us</h1>
-                <p class="lead">KaraKleanz is a premiere cleaning service. We redefine the cleaning experience into an art of spatial sanctity.</p>
+                <h1 class="display-4 fw-normal text-body-emphasis">How it works</h1>
+                <p class="lead">KaraKleanz is a premiere commercial and domestic cleaning service. We redefine the cleaning experience into an art of spatial sanctity.</p>
             </div>
         </section>
 
+
+        <!-- Services Section -->
+        <section id="services" class="py-5">
+            <div class="container text-center">
+                <h1 class="display-4 fw-normal text-body-emphasis">Services</h1>
+                <p class="lead">
+                    Regular cleaning
+                    One-off cleaning
+                    End of tenancy cleaning
+                    Deep cleaning
+                    After builders cleaning
+                    Carpet cleaning
+                    Commercial cleaning
+                </p>
+            </div>
+        </section>
+
+
         <!-- Services Section (Grid System) -->
-        <section id="pricing">
+        <section id="pricing" class="py-5">
             <div class="container text-center">
                 <div class="pricing-header p-3 pb-md-4 mx-auto text-center"> 
                     <h1 class="display-4 fw-normal text-body-emphasis">Pricing</h1> 
                     <p class="lead">Every space we touch is treated with the reverence of a restoration project. Our vetted professionals follow a 47-point methodology, ensuring every surface, crevice, and corner meets the KaraKleanz standard.</p> 
-                </div>              
-
+                </div>            
+                
 <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
     <div class="col">
         <div class="card mb-4 rounded-0 shadow-sm">
             <div class="card-header py-3 rounded-0">
-                <h4 class="my-0 fw-normal">Standard Clean</h4>
+                <h4 class="my-0 fw-normal">Regular</h4>
             </div>
             <div class="card-body rounded-0">
                 <h1 class="card-title pricing-card-title">£25<small class="text-body-secondary fw-light">/ph</small></h1>
-                <ul class="list-unstyled mt-3 mb-4 fs-5">
-                    <li><i class="bi bi-bag-check"></i> Full surface sanitisation</li>
-                    <li><i class="bi bi-bag-check"></i> Carpet steam cleaning</li>
-                    <li><i class="bi bi-bag-check"></i> Cabinet exterior wipe-down</li>
-                    <li><i class="bi bi-bag-check"></i> Interior window cleaning</li>
-                </ul> <button type="button" class="w-100 btn btn-lg btn-outline-primary rounded-0">Book service</button>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>30 users included</li>
+                    <li>15 GB of storage</li>
+                    <li>Phone and email support</li>
+                    <li>Help center access</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-outline-primary rounded-0">Book service</button>
             </div>
         </div>
     </div>
     <div class="col">
         <div class="card mb-4 rounded-0 shadow-sm">
             <div class="card-header py-3 rounded-0">
-                <h4 class="my-0 fw-normal">Deep Clean</h4>
+                <h4 class="my-0 fw-normal">Deep</h4>
             </div>
             <div class="card-body rounded-0">
                 <h1 class="card-title pricing-card-title">£175<small class="text-body-secondary fw-light">/one off</small>
                 </h1>
-                <ul class="list-unstyled mt-3 mb-4 fs-5">
-                    <li><i class="bi bi-bag-check"></i> Standard clean</li>
-                    <li><i class="bi bi-shield-plus"></i> Window washing</li>
-                    <li><i class="bi bi-shield-plus"></i> Grout & tile restoration</li>
-                    <li><i class="bi bi-shield-plus"></i> Appliance deep clean</li>
-                    <li><i class="bi bi-shield-plus"></i> Cabinet interior wipe-down</li>
-                    <li><i class="bi bi-shield-plus"></i> Skirting detailing</li>
-                </ul> <button type="button" class="w-100 btn btn-lg btn-outline-primary rounded-0">Book service</button>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>30 users included</li>
+                    <li>15 GB of storage</li>
+                    <li>Phone and email support</li>
+                    <li>Help center access</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-outline-primary rounded-0">Book service</button>
             </div>
         </div>
     </div>
     <div class="col">
         <div class="card mb-4 rounded-0 shadow-sm">
             <div class="card-header py-3 rounded-0">
-                <h4 class="my-0 fw-normal">End of Tenancy Clean</h4>
+                <h4 class="my-0 fw-normal">End of Tenancy</h4>
             </div>
             <div class="card-body rounded-0">
                 <h1 class="card-title pricing-card-title">£490<small class="text-body-secondary fw-light">/one off</small>
                 </h1>
-                <ul class="list-unstyled mt-3 mb-4 fs-5">
-                    <li><i class="bi bi-bag-check"></i> Standard & Deep clean</li>
-                    <li><i class="bi bi-shield-plus"></i> Debris & dust removal</li>
-                    <li><i class="bi bi-shield-plus"></i> Paint splatter cleaning</li>
-                    <li><i class="bi bi-shield-plus"></i> HVAC vent dusting</li>
-                    <li><i class="bi bi-shield-plus"></i> Floor polish & protection</li>
-                    <li><i class="bi bi-shield-plus"></i> Window & frame detailing</li>
-                    <li><i class="bi bi-shield-plus"></i> Final walk-through inspection</li>
-                </ul> <button type="button" class="w-100 btn btn-lg btn-outline-primary rounded-0">Book service</button>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>30 users included</li>
+                    <li>15 GB of storage</li>
+                    <li>Phone and email support</li>
+                    <li>Help center access</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-outline-primary rounded-0">Book service</button>
             </div>
         </div>
     </div>
 </div>
+
+                <h2 class="display-6 text-center mb-4">Compare services</h2>
+<div class="table-responsive">
+    <table class="table text-center">
+        <thead>
+            <tr>
+                <th style="width: 34%;"></th>
+                <th style="width: 22%;">Regular</th>
+                <th style="width: 22%;">Deep</th>
+                <th style="width: 22%;">End of Tenancy</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row" class="text-start">Full surface</th>
+                <td><i class="bi bi-check-lg"></i></td>
+                <td><i class="bi bi-check-lg"></i></td>
+                <td><i class="bi bi-check-lg"></i></td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Carpet steam</th>
+                <td><i class="bi bi-check-lg"></i></td>
+                <td><i class="bi bi-check-lg"></i></td>
+                <td><i class="bi bi-check-lg"></i></td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Cabinet exteriors</th>
+                <td><i class="bi bi-check-lg"></i></td>
+                <td><i class="bi bi-check-lg"></i></td>
+                <td><i class="bi bi-check-lg"></i></td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Interior windows</th>
+                <td><i class="bi bi-check-lg"></i></td>
+                <td><i class="bi bi-check-lg"></i></td>
+                <td><i class="bi bi-check-lg"></i></td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <th scope="row" class="text-start">Exterior windows</th>
+                <td></td>
+                <td><i class="bi bi-check-lg"></i></td>
+                <td><i class="bi bi-check-lg"></i></td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Grout restoration</th>
+                <td></td>
+                <td><i class="bi bi-check-lg"></i></td>
+                <td><i class="bi bi-check-lg"></i></td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Appliances</th>
+                <td></td>
+                <td><i class="bi bi-check-lg"></i></td>
+                <td><i class="bi bi-check-lg"></i></td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Cabinet interior</th>
+                <td></td>
+                <td><i class="bi bi-check-lg"></i></td>
+                <td><i class="bi bi-check-lg"></i></td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Skirting detailing</th>
+                <td></td>
+                <td><i class="bi bi-check-lg"></i></td>
+                <td><i class="bi bi-check-lg"></i></td>
+            </tr>
+        </tbody>
+        <tbody>            
+            <tr>
+                <th scope="row" class="text-start">Debris removal</th>
+                <td></td>
+                <td></td>
+                <td><i class="bi bi-check-lg"></i></td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Paint splatter</th>
+                <td></td>
+                <td></td>
+                <td><i class="bi bi-check-lg"></i></td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">HVAC dusting</th>
+                <td></td>
+                <td></td>
+                <td><i class="bi bi-check-lg"></i></td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Floor polishing</th>
+                <td></td>
+                <td></td>
+                <td><i class="bi bi-check-lg"></i></td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Window detailing</th>
+                <td></td>
+                <td></td>
+                <td><i class="bi bi-check-lg"></i></td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Final walk-through</th>
+                <td></td>
+                <td></td>
+                <td><i class="bi bi-check-lg"></i></td>
+            </tr>
+        </tbody>
+
+        
+    </table>
+</div>
+
+
+
 
 
 
@@ -322,9 +347,10 @@ border-color: #ffffff
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="bg-dark-custom">
+        <section id="contact" class="bg-dark-custom py-5">
             <div class="container text-center">
                 <h1 class="display-4 fw-normal text-body-emphasis">Contact Us</h1>
+                 <p class="text-center">Ready to book a service? Get in touch with us today!</p>
                 <form class="col-md-6 mx-auto mt-4">
                     <input type="text" class="form-control form-control-lg mb-3 rounded-0" placeholder="Your Name">
                     <input type="email" class="form-control form-control-lg mb-3 rounded-0" placeholder="Your Email">
@@ -334,14 +360,44 @@ border-color: #ffffff
         </section>
 
         <footer class="container"> 
-            <p class="float-end"><a href="#">Back to top</a></p> 
-            <p>© 2026 KaraKleanz. All rights reserved. | <a href="#">Privacy</a> | <a href="#">Terms</a></p> 
+
+            <p>Available in:</p>
+
+            <p>East London, North London, South East London, South London, South West London, West London, Balham, Battersea, Brixton, Croydon, Canary Wharf, Clapham, Ealing, Fulham, Greenwich, Hackney, Harrow, Islington, Kensington & Chelsea, Putney, Richmond, Stoke Newington, Tooting, Walthamstow, Wandsworth, Wimbledon</p>
+
+            <p class="float-end"><a href="#home">Back to top</a></p> 
+            <p>
+                <a href="#home">Privacy</a>
+                <a href="#home">Terms</a>
+            </p> 
+
+<div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+    <p>© 2026 KaraKleanz. All rights reserved.</p>
+            <ul class="list-unstyled d-flex">
+                <li class="ms-3">
+                    <a class="link-body-emphasis" href="#" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a class="link-body-emphasis" href="#" aria-label="Facebook">
+                    <i class="bi bi-facebook"></i>
+                    </a>
+                </li>
+            </ul>
+</div>
+
+
+
         </footer>
 
     </main>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="assets/js/color-modes.js"></script>
     <script src="assets/js/script.js"></script>
+    
 </body>
 
 </html>
