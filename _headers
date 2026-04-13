@@ -1,1 +1,2 @@
-
+/*
+  Content-Security-Policy: script-src 'self' 'unsafe-eval' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com/ajax/libs/animejs/ https://square.site;
