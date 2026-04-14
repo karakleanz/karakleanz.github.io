@@ -1,0 +1,2 @@
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://square.site https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com/ajax/libs/animejs/; connect-src 'self' https://square.site; img-src 'self' data: https://square.site; style-src 'self' 'unsafe-inline'; frame-src https://square.site;
