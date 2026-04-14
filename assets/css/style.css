@@ -416,3 +416,8 @@ html[data-bs-theme="dark"] .bi.bi-bag-check-lg {
     color: #ffffff !important; /* white on dark theme */
     transition: color 0.18s ease;
 }
+
+
+.text-bg-primary{
+    background-color: #153649 !important;
+}
