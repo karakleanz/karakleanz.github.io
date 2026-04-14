@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com/ajax/libs/animejs/">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com/ajax/libs/animejs/ https://square.site https://fonts.googleapis.com;">
     <meta name="description" content="">
     <meta name="author" content="Jahi Grant">
     <meta name="generator" content="KaraKleanz v0.0.1">
@@ -151,27 +151,46 @@
                 <h1 class="display-4 fw-normal text-body-emphasis">Services</h1>
 
 
+<script src='https://square.site/appointments/buyer/widget/hdpac2ljf2ng1v/LJTZFTT8MZE4P.js'></script>
+<script>
+    fetch('https://square.site/appointments/buyer/widget/hdpac2ljf2ng1v/LJTZFTT8MZE4P.js')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('output-div').innerHTML = `<pre><code>${data}</code></pre>`;
+  });
+</script>
 
- <!-- Start Square Appointments Embed Code --><script src='https://app.squareup.com/appointments/buyer/widget/wbfji6jiu1obkq/LJTZFTT8MZE4P.js'></script><!-- End Square Appointments Embed Code --> 
 
-<!-- Start Square Appointments Embed code -->
-<a target="_top" style="
-background-color: #006aff;
-border: none;
-color: white;
-height: 40px;
-text-transform: uppercase;
-font-family: 'Square Market', sans-serif;
-letter-spacing: 1px;
-line-height: 38px;
-padding: 0 28px;
-border-radius: 8px;
-font-weight: 500;
-font-size: 14px;
-cursor: pointer;
-display: inline-block;
-" href="https://app.squareup.com/appointments/book/hdpac2ljf2ng1v/LJTZFTT8MZE4P/start" rel="nofollow">Book now</a>
-<!-- End Square Appointments Embed code -->
+<div id="sq-widget"></div>
+
+<script>
+// URL of the Square widget script
+const widgetURL = "https://square.site/appointments/v2/widget.js";
+
+// Fetch the script as text
+fetch(widgetURL)
+  .then(response => response.text())
+  .then(jsCode => {
+    // Create a script element
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.text = jsCode; // inject the fetched JS code
+
+    // Append script to the page so it executes
+    document.body.appendChild(script);
+
+    // Initialize the widget AFTER the script loads
+    SquareAppointments.init({
+      id: "hdpac2ljf2ng1v",
+      elementId: "sq-widget"
+    });
+  })
+  .catch(err => {
+    console.error("Failed to load Square widget:", err);
+  });
+</script>
+
+
 
                 <p class="lead">
                     Regular cleaning
@@ -205,7 +224,7 @@ display: inline-block;
                 <ul class="list-unstyled mt-3 mb-4">
                     <li>More info below</li>
                 </ul>
-                <button type="button" class="w-100 btn btn-lg btn-outline-primary rounded-0">Book service</button>
+                <a target="_top" class="w-100 btn btn-lg btn-outline-primary rounded-0" href="https://app.squareup.com/appointments/book/hdpac2ljf2ng1v/LJTZFTT8MZE4P/start" rel="nofollow">Book service</a>
             </div>
         </div>
     </div>
@@ -219,7 +238,7 @@ display: inline-block;
                 <ul class="list-unstyled mt-3 mb-4">
                     <li>More info below</li>
                 </ul>
-                <button type="button" class="w-100 btn btn-lg btn-outline-primary rounded-0">Book service</button>
+                <a target="_top" class="w-100 btn btn-lg btn-outline-primary rounded-0" href="https://app.squareup.com/appointments/book/hdpac2ljf2ng1v/LJTZFTT8MZE4P/start" rel="nofollow">Book service</a>
             </div>
         </div>
     </div>
@@ -233,7 +252,7 @@ display: inline-block;
                 <ul class="list-unstyled mt-3 mb-4">
                     <li>More info below</li>
                 </ul>
-                <button type="button" class="w-100 btn btn-lg btn-outline-primary rounded-0">Book service</button>
+                <a target="_top" class="w-100 btn btn-lg btn-outline-primary rounded-0" href="https://app.squareup.com/appointments/book/hdpac2ljf2ng1v/LJTZFTT8MZE4P/start" rel="nofollow">Book service</a>
             </div>
         </div>
     </div>
