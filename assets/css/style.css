@@ -6,7 +6,7 @@ section {
 }
 
 :root {
-    --primary-color: #007bff;
+    --primary-color: #044a01;
     --secondary-color: #6c757d;
     --navbar-height: 84px;
 }
@@ -52,19 +52,19 @@ body {
         }
 
         .btn-bd-primary{
-            --bd-violet-bg: #153649;
+            --bd-violet-bg: #044a01;
             --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
             --bs-btn-font-weight: 600;
             --bs-btn-color: var(--bs-white);
             --bs-btn-bg: var(--bd-violet-bg);
             --bs-btn-border-color: var(--bd-violet-bg);
             --bs-btn-hover-color: var(--bs-white);
-            --bs-btn-hover-bg: #20506c;
-            --bs-btn-hover-border-color: #153649;
+            --bs-btn-hover-bg: #16840e;
+            --bs-btn-hover-border-color: #064d03;
             --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
             --bs-btn-active-color: var(--bs-btn-hover-color);
-            --bs-btn-active-bg: #153649;
-            --bs-btn-active-border-color: #153649
+            --bs-btn-active-bg: #064d03;
+            --bs-btn-active-border-color: #064d03
         }
 
         [data-bs-theme="dark"] .btn-outline-primary {
@@ -73,13 +73,13 @@ border-color: #ffffff
 }
 
         .btn-outline-primary {
-            border-color: #153649;
-            color: #153649;
+            border-color: #064d03;
+            color: #064d03;
         }
         .btn-outline-primary:hover {
             color: #fff;
-    background-color: #153649;
-    border-color: #153649;
+    background-color: #16840e;
+    border-color: #16840e;
         }
 
         .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
@@ -384,26 +384,43 @@ html[data-bs-theme="dark"] .card-header {
     background-color: #153649 !important;
     color: #ffffff !important;
 }
+
+html[data-bs-theme="light"] h2 .badge{
+    background-color: #064d03 !important;
+    border-color: #064d03 !important;
+    color: #ffffff !important;    
+}
+html[data-bs-theme="dark"] .badge{
+    background-color: #010100  !important;
+    border-color: #000000 !important;
+    color: #ffffff !important;
+}
+html[data-bs-theme="dark"] .badge:hover {
+background-color: #111315 !important;
+    border-color: #373333 !important;
+}
+
+
 html[data-bs-theme="light"] .card .btn {
-    background-color: #175D68 !important;
-    border-color: #175D68 !important;
+    background-color: #064d03 !important;
+    border-color: #064d03 !important;
     color: #ffffff !important;
 }
 
 html[data-bs-theme="light"] .card .btn:hover {
-    background-color: #153649 !important;
-    border-color: #153649 !important;
+    background-color: #16840e !important;
+    border-color: #16840e !important;
 }
 
 html[data-bs-theme="dark"] .card .btn {
-    background-color: #20506c !important;
-    border-color: #20506c !important;
+    background-color: #010100  !important;
+    border-color: #000000 !important;
     color: #ffffff !important;
 }
 
 html[data-bs-theme="dark"] .card .btn:hover {
-    background-color: #153649 !important;
-    border-color: #153649 !important;
+background-color: #111315 !important;
+    border-color: #373333 !important;
 }
 
 
@@ -422,20 +439,44 @@ html[data-bs-theme="dark"] .bi.bi-bag-check-lg {
     background-color: #153649 !important;
 }
 
-
-
-
-section.pricing {
-  background: #007bff;
-  background: linear-gradient(to right, #0062E6, #33AEFF);
+html[data-bs-theme="dark"] section.services {
+    background: #000000;
+    background: linear-gradient(to right, #282828, #2c3137);
 }
 
-.pricing .card {
+html[data-bs-theme="light"] section.services {
+  background: #e7e7e7;
+  background: linear-gradient(to right, #e7e7e7, #ebebeb);
+}
+
+
+html[data-bs-theme="dark"] section.pricing {
+    background: #000000;
+    background: linear-gradient(to right, #282828, #2c3137);
+}
+
+html[data-bs-theme="light"] section.pricing {
+  background: #4ba235;
+    background: linear-gradient(to right, #68b04d, #42cf6b);
+}
+
+.pricing .card,
+.services .card,
+.services .table-responsive {
   border: none;
-  border-radius: 0.6rem;
+  border-radius: 0.2rem;
   transition: all 0.2s;
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
 }
+
+html[data-bs-theme="light"] .services .table-responsive {
+  background-color: #ffffff;
+}
+html[data-bs-theme="dark"] .services .table-responsive {
+  background-color: #212529;
+}
+
+
 
 .pricing hr {
   margin: 1.5rem 0;
@@ -465,15 +506,6 @@ section.pricing {
   opacity: 0.7;
 }
 
-.pricing .btn {
-  font-size: 80%;
-  border-radius: 5rem;
-  letter-spacing: .1rem;
-  font-weight: bold;
-  padding: 1rem;
-  opacity: 0.7;
-  transition: all 0.2s;
-}
 
 /* Hover Effects on Card */
 
