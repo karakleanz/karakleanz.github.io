@@ -401,6 +401,18 @@ background-color: #111315 !important;
 }
 
 
+
+html[data-bs-theme="light"] .how-it-works .bi {
+    color: #064d03 !important;
+}
+
+html[data-bs-theme="dark"] .how-it-works .bi{
+    color: #ffffff !important;
+}
+
+
+
+
 html[data-bs-theme="light"] .card .btn {
     background-color: #064d03 !important;
     border-color: #064d03 !important;
